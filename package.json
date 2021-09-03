@@ -2,6 +2,7 @@
   "name": "vue3-boilerplate",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "serve": "node service/commands/serve.js",
     "build": "node service/commands/build.js",
@@ -64,6 +65,6 @@
     "webpack-merge": "^5.8.0"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=12.20.0"
   }
 }

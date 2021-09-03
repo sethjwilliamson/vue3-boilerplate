@@ -1,6 +1,5 @@
-'use strict'
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import autoprefixer from 'autoprefixer'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -30,7 +29,7 @@ const genStyleRules = () => {
     loader: 'postcss-loader',
     options: {
       postcssOptions: {
-        plugins: [require('autoprefixer')],
+        plugins: [autoprefixer()],
       },
     },
   }
@@ -64,7 +63,7 @@ const genStyleRules = () => {
   ]
 }
 
-module.exports = {
+export default {
   plugins,
   module: {
     rules: genStyleRules(),

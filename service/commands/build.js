@@ -1,18 +1,16 @@
-'use strict'
-
-const loadEnv = require('../utils/loadEnv')
+import loadEnv from '../utils/loadEnv.js'
 loadEnv()
 loadEnv('production')
 
-const rm = require('rimraf')
-const webpack = require('webpack')
+import rm from 'rimraf'
+import webpack from 'webpack'
 
-const { error, done } = require('../utils/logger')
-const { logWithSpinner, stopSpinner } = require('../utils/spinner')
-const paths = require('../utils/paths')
+import { error, done } from '../utils/logger.js'
+import { logWithSpinner, stopSpinner } from '../utils/spinner.js'
+import * as paths from '../utils/paths.js'
 
-const webpackConfig = require('../config/prod')
-const config = require('../project.config')
+import webpackConfig from '../config/prod.js'
+import config from '../project.config.js'
 
 logWithSpinner('Building for production...')
 
